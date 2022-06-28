@@ -1,0 +1,208 @@
+@import "mixin";
+
+.Address {
+  @include col;
+  h1 {
+    color: #800000;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    @media (max-width: 420px) {
+      line-height: 16px;
+    }
+  }
+  span {
+    color: rgba(211, 139, 58, 0.98);
+    background: transparent;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+    padding: 4px;
+    @media (max-width: 420px) {
+      line-height: 14px;
+      font-size: 12px;
+    }
+  }
+  &Cards {
+    @include col;
+  }
+}
+
+.Card {
+  @include col;
+  background: rgba(255, 255, 255, 0.61);
+  border-radius: 20px;
+  border: 1px solid #46040491;
+  margin-bottom: 1%;
+  margin-top: 2%;
+
+  width: 100%;
+  padding: 3% 4%;
+  &Top {
+    @include row;
+    width: 100%;
+    justify-content: flex-end;
+    input[type="checkbox"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 10px;
+      height: 10px;
+      padding: 2px;
+      border-radius: 7px;
+      outline-offset: 3px;
+      outline: 1px solid #800000;
+      background-color: white;
+      cursor: pointer;
+    }
+    input[type="checkbox"]:checked {
+      background-color: #800000;
+    }
+  }
+  &Buttons {
+    @include row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2%;
+    @media (max-width: 550px) {
+      justify-content: center;
+    }
+    button {
+      @include row;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2%;
+      background: #faefef;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      width: 120px;
+      height: 30px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: #d38b3a;
+      @media (max-width: 550px) {
+        font-size: 10px;
+        width: 60px;
+        img {
+          height: 10px !important;
+          width: 10px !important;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  &Name {
+    font-weight: 600 !important;
+    font-size: 20px !important;
+    color: #bb680a !important;
+    @media (max-width: 750px) {
+      font-size: 18px !important;
+    }
+    @media (max-width: 550px) {
+      font-size: 14px !important;
+    }
+  }
+  &Phone {
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    margin-bottom: 0;
+    margin-top: 10px;
+    @media (max-width: 750px) {
+      font-size: 14px !important;
+    }
+    @media (max-width: 550px) {
+      font-size: 10px !important;
+    }
+    &R {
+      color: rgba(70, 4, 4, 0.79) !important;
+    }
+    &Al {
+      color: rgba(70, 4, 4, 0.3) !important;
+    }
+  }
+  &Add {
+    color: rgba(70, 4, 4, 0.5) !important;
+    font-size: 13px !important;
+    margin: 0%;
+    @media (max-width: 550px) {
+      font-size: 10px !important;
+    }
+  }
+  &Pin {
+    line-height: 0px;
+    font-size: 12px !important;
+    color: rgba(70, 4, 4, 0.79) !important;
+    @media (max-width: 550px) {
+      font-size: 10px !important;
+    }
+  }
+}
+
+.AddressForm {
+  @include col;
+  label {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 24px;
+    color: #46040499;
+  }
+  input,
+  textarea {
+    background: #fffcf8;
+    border: 1px solid rgba(70, 4, 4, 0.21);
+    border-radius: 8px;
+    color: rgba(94, 92, 92, 0.7);
+    font-size: 16px;
+    padding: 3px;
+    &:active,
+    &:focus {
+      outline: 1px solid #46040499;
+    }
+  }
+  div {
+    margin-top: 2%;
+    width: 100%;
+    @include col;
+  }
+  &BelowArea {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+  div > div {
+    width: 28%;
+    @include col;
+    @media (max-width: 800px) {
+      width: 45%;
+    }
+    @media (max-width: 500px) {
+      width: 98%;
+    }
+  }
+  button {
+    margin-top: 4%;
+    background: #460404;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 125px;
+    padding: 4px;
+    color: #fbad55;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .Name {
+    width: 30%;
+    @media (max-width: 800px) {
+      width: 45%;
+    }
+    @media (max-width: 500px) {
+      width: 98%;
+    }
+  }
+}

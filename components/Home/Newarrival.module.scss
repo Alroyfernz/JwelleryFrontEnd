@@ -1,0 +1,141 @@
+.arrivalSection {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 15px 55px 15px;
+    background: rgba(128, 0, 0, 0.1);
+    position: relative;
+    // background-size: 100%;
+    // background-repeat: no-repeat;
+    // background-image: url("https://storage.sg.content-cdn.io/in-resources/d7048855-742a-406c-a67d-5c2962e69e5e/Stylesheet/images/newlunch-bg.jpg");
+
+    .leftNav {
+        left: 0px;
+        position: absolute;
+        color: #ffffff;
+        font-size: 32px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .rightNav {
+        right: 0px;
+        font-size: 32px;
+
+        position: absolute;
+        color: #fff;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .arrivalTitle {
+        color: #000;
+
+        text-transform: uppercase;
+        font-weight: 600;
+        font-weight: 600;
+        font-size: 27px;
+        line-height: 36px;
+
+        color: #000000;
+
+        opacity: 0.7;
+        padding: 20px 0 50px;
+        margin: 0;
+        &::after {
+            content: "";
+            height: 15px;
+            width: 100%;
+            background: url("https://storage.sg.content-cdn.io/in-resources/d7048855-742a-406c-a67d-5c2962e69e5e/Stylesheet/images/newlunch-head-bottom.png")
+                no-repeat center bottom;
+            text-align: center;
+            display: block;
+            padding: 0;
+            margin: 0 auto;
+        }
+    }
+    .arrivalContainer {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .arrivalWrapper {
+            // width: 89%;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            // overflow-x: scroll;
+
+            align-items: center;
+            justify-content: center;
+            gap: 2%;
+            .arrivalComp {
+                width: fit-content !important;
+                height: 251px;
+                cursor: pointer;
+                margin-left: 10px;
+                padding: 12px;
+                position: relative;
+                background-color: #fff;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                h5 {
+                    color: #800000;
+
+                    opacity: 0.7;
+                    font-size: 18px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    padding: 0;
+                    margin: 0;
+                    width: 100%;
+                    text-align: center;
+                    // position: absolute;
+                    // bottom: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .arrivalSection {
+        background-size: 355%;
+        .arrivalTitle {
+            font-size: 20px;
+        }
+        .leftNav {
+            color: #000;
+            left: 0;
+            z-index: 1;
+        }
+        .rightNav {
+            color: #000;
+            right: 0;
+            z-index: 1;
+        }
+        .arrivalContainer {
+            .arrivalWrapper {
+                // width: unset;
+                .arrivalComp {
+                    // width: 89vw;
+                }
+            }
+        }
+    }
+}

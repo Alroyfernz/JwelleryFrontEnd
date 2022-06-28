@@ -1,0 +1,109 @@
+@import "mixin";
+
+.Contactus {
+  @include center;
+  background-color: rgba(242, 230, 230, 1);
+  width: 100%;
+  padding: 6% 2%;
+  &Wrapper {
+    width: 97%;
+    @include row;
+    justify-content: space-between;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  &Left {
+    width: 35%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+    .AddressContainer {
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      @media screen and (max-width: 768px) {
+        padding: 20px 30px;
+      }
+      padding: 50px 40px;
+      @include center;
+      flex-direction: column;
+
+      .AddressTop {
+        display: flex;
+        align-items: center;
+        h2 {
+          color: rgba(70, 4, 4, 1);
+          font-weight: 600;
+          font-size: 18px;
+          margin-left: 8px;
+          @media only screen and (max-width: 768px) {
+            font-size: unset;
+          }
+        }
+      }
+      .AddrTitle {
+        color: #000;
+        font-size: 17px;
+        font-weight: 500;
+        margin-top: 3%;
+        text-align: center;
+        @media only screen and (max-width: 768px) {
+          font-size: 15px;
+        }
+      }
+      .AddrData {
+        font-size: 15px;
+        margin-top: 1%;
+        text-align: center;
+        color: rgba(175, 171, 171, 1);
+        @media only screen and (max-width: 768px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &Right {
+    width: 59%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin-top: 8%;
+    }
+    .FormContainer {
+      background-color: #fff;
+      @include center;
+      border-radius: 10px;
+      padding: 30px 0;
+      .FormBody {
+        width: 90%;
+        .FormTitle {
+          color: rgba(70, 4, 4, 1);
+          font-weight: 500;
+          font-size: 18px;
+          text-transform: capitalize;
+          margin-bottom: 20px !important;
+        }
+        .formEle {
+          @include row;
+          gap: 5%;
+          margin-top: 3%;
+        }
+        .submitBtn {
+          margin-top: 4%;
+          background-color: rgba(70, 4, 4, 1);
+          border: unset;
+          padding: 5px 0;
+          color: rgba(251, 173, 85, 1);
+          width: 30%;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 6px;
+
+          @media screen and (max-width: 768px) {
+            width: 50%;
+            margin-top: 5%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+@import "mixin";
+
+.Wish {
+  @include col;
+  width: 100%;
+  &Top {
+    @include row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    h2 {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 33px;
+      color: #800000;
+    }
+    .Select {
+      &Style {
+        width: 150px;
+        height: 30px !important;
+        background: #faefef;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+      }
+    }
+  }
+  &Bottom {
+    @include col;
+    width: 100%;
+  }
+}
+
+.Card {
+  @include row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2%;
+  padding: 2% 3%;
+  background: #ffffff;
+  border: 1px solid rgba(211, 139, 58, 0.35);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  &Price {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 27px;
+    color: #460404;
+    &::after {
+      content: "/-";
+    }
+    @media (max-width: 700px) {
+      font-size: 10px;
+    }
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+  &Info {
+    width: 70%;
+    @include row;
+    &Img {
+      width: 40%;
+    }
+    &Style {
+      min-width: 60%;
+      max-width: 60%;
+      margin-left: 4%;
+      @include col;
+      justify-content: center;
+      &Name {
+        font-weight: 600;
+        font-size: 15px;
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        line-height: 20px;
+        color: #460404;
+        @media (max-width: 700px) {
+          font-size: 13px;
+        }
+      }
+      &Id {
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 16px;
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: rgba(70, 4, 4, 0.29);
+        margin: 3% 0 3% 0;
+        @media (max-width: 700px) {
+          font-size: 10px;
+        }
+      }
+      &Rating {
+        background: #d38b3a;
+        border-radius: 5px;
+        padding: 3px 10px;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 16px;
+        color: #ffffff;
+        width: 40px;
+        text-align: center;
+        @media (max-width: 700px) {
+          padding: 2px 5px;
+          width: 30px;
+          font-size: 11px;
+        }
+        @media (max-width: 500px) {
+          padding: 1px;
+          width: 25px;
+          font-size: 8px;
+        }
+      }
+      &Price {
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 27px;
+        color: #460404;
+        &::after {
+          content: "/-";
+        }
+        @media (min-width: 500px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

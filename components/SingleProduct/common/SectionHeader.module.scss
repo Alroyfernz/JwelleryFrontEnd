@@ -1,0 +1,22 @@
+@import "../../../styles/mixin";
+
+.SectionHeader {
+  width: 100%;
+  &H {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(70, 4, 4, 0.81);
+  }
+  &Hr {
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.25) 7.43%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    height: 1px;
+  }
+}

@@ -1,0 +1,624 @@
+@import "../styles/mixin";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+
+.paymentPageMobile {
+    .paymentSubTitle {
+        font-size: 15px;
+    }
+    .paymentBox {
+        @include center;
+        width: 100%;
+        margin-top: 2%;
+        flex-direction: column;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 6px;
+        padding: 20px 20px;
+        img {
+            width: 80%;
+        }
+        p {
+            color: rgba(128, 0, 0, 1);
+            font-weight: 600;
+            margin-bottom: 3%;
+        }
+        button {
+            background-color: rgba(128, 0, 0, 1);
+            color: #fff;
+            border-radius: 4px;
+            width: 60%;
+            margin-top: 5%;
+            padding: 7px;
+        }
+    }
+}
+.checkoutSection {
+    font-family: "Poppins", sans-serif;
+    background: rgba(242, 230, 230, 1);
+    padding: 3% 0;
+    width: 100%;
+    height: 100%;
+    @include center;
+    flex-direction: column;
+    &Wrapper {
+        width: 90%;
+
+        .CheckoutTitle {
+            margin-bottom: 1.5%;
+            color: rgba(70, 4, 4, 1);
+            font-size: 28px;
+            text-transform: uppercase;
+            font-weight: 600;
+            align-self: flex-start;
+        }
+
+        &Main {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2%;
+
+            &Left {
+                width: 60%;
+
+                .paymentPage {
+                    .paymentSubTitle {
+                        font-size: 15px;
+                    }
+                    .paymentBox {
+                        @include center;
+                        width: 60%;
+                        margin-top: 2%;
+                        flex-direction: column;
+                        background-color: #fff;
+                        border: 1px solid #000;
+                        border-radius: 6px;
+                        padding: 20px 20px;
+                        img {
+                            width: 80%;
+                        }
+                        p {
+                            color: rgba(128, 0, 0, 1);
+                            font-weight: 600;
+                            margin-bottom: 3%;
+                        }
+                        button {
+                            background-color: rgba(128, 0, 0, 1);
+                            color: #fff;
+                            border-radius: 4px;
+                            width: 40%;
+                            padding: 7px;
+                        }
+                    }
+                }
+            }
+            &Right {
+                width: 30%;
+            }
+        }
+    }
+    .checkoutImg {
+        margin-top: 4%;
+        margin-bottom: 2%;
+    }
+    .chakra-accordion__button {
+        background-color: transparent !important;
+    }
+    // .chakraAccordion {
+    //     margin-bottom: 5%;
+    //     padding: 12px 12px 2px 12px;
+    //     width: 100%;
+    //     border: 1px solid rgb(192, 192, 192);
+
+    //     .accordionItem {
+    //         border: none;
+
+    //         h2 {
+    //             background-color: #dfe5e6;
+    //             margin-bottom: 10px;
+    //             button {
+    //                 &:focus {
+    //                     outline: none;
+    //                     box-shadow: unset;
+    //                     background: unset;
+    //                 }
+    //             }
+    //             .box {
+    //                 .labelNumber {
+    //                     font-weight: 700;
+    //                     color: #51626f;
+    //                     background: url("https://assets.sg.content-cdn.io/css/themes/mjt02012319/images/container2/singlepagecheckout/stepbullet_normal.png")
+    //                         12px no-repeat;
+    //                     // display: block;
+    //                     // width: 20px;
+    //                     padding: 4px 20px 4px 0;
+    //                     /* border-radius: 3px; */
+    //                     font-size: 14px;
+    //                     line-height: 38px;
+    //                     margin: 0 5px 0 0 !important;
+    //                     // float: left;
+    //                 }
+    //                 span {
+    //                     color: rgb(68, 68, 68);
+    //                     font-size: 18px;
+    //                 }
+    //             }
+    //         }
+    //         .panel {
+    //             padding: 28px 6px;
+    //             width: 100%;
+    //             display: flex !important;
+    //             height: 100%;
+    //             flex-direction: column;
+    //             @include center;
+    //             .panelContainer {
+    //                 width: 90%;
+    //                 height: 100%;
+    //                 .panelTitle {
+    //                     font-size: 18px;
+    //                     margin: unset;
+    //                     margin-bottom: 4px;
+    //                     color: #6b1aa6;
+    //                 }
+    //                 .panelSubText {
+    //                     color: #666;
+    //                     margin-bottom: 8px;
+    //                     .imp {
+    //                         color: red;
+    //                     }
+    //                 }
+    //                 .infoContainer {
+    //                     display: grid;
+    //                     grid-template-columns: 1fr 1fr 1fr;
+    //                     grid-gap: 14px;
+    //                     .addressComp {
+    //                         h5 {
+    //                             margin-bottom: 2px;
+    //                         }
+    //                         input {
+    //                             width: 100%;
+    //                             border: 1px solid #ddd;
+
+    //                             &:focus {
+    //                                 outline: none;
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+    //                 .giftBox {
+    //                     padding: 0 18px;
+    //                     margin-top: 2%;
+    //                     width: 100%;
+    //                     height: auto;
+
+    //                     ul {
+    //                         list-style: none;
+    //                         margin-bottom: 6px;
+
+    //                         li {
+    //                             font-size: 12px;
+    //                             color: #666;
+    //                         }
+    //                         .giftIcon {
+    //                             display: flex;
+    //                             align-items: center;
+    //                             font-size: 13px;
+    //                             color: #000;
+    //                             input {
+    //                                 margin-right: 5px;
+    //                             }
+    //                         }
+    //                     }
+    //                     textarea {
+    //                         &:focus {
+    //                             outline: none;
+    //                         }
+    //                         width: 60%;
+    //                         border: 1px solid #ddd;
+    //                     }
+    //                 }
+    //                 .nextBtn {
+    //                     float: right;
+    //                     border: unset;
+    //                     border-radius: 6px;
+    //                     width: 7%;
+    //                     background-color: #5c2e8c;
+    //                     padding: 3px 4px;
+    //                     text-transform: uppercase;
+    //                     color: #fff;
+    //                     font-size: 14px;
+    //                 }
+    //             }
+
+    //             .nextBtn {
+    //                 border: unset;
+    //                 margin-left: 80%;
+    //                 border-radius: 6px;
+    //                 width: 7%;
+    //                 background-color: #5c2e8c;
+    //                 padding: 3px 4px;
+    //                 text-transform: uppercase;
+    //                 color: #fff;
+    //                 font-size: 14px;
+    //             }
+
+    //             .InvoiceSection {
+    //                 margin-top: 1%;
+    //                 width: 96%;
+    //                 margin-bottom: 5% !important;
+    //                 height: 100%;
+    //                 display: flex;
+    //                 .InvoiceLeft {
+    //                     width: 50%;
+    //                     height: 100%;
+    //                     &Heading {
+    //                         color: #6b1aa6;
+    //                         font-size: 14px;
+    //                         font-weight: 600;
+    //                         line-height: 24px;
+    //                     }
+    //                     &Table {
+    //                         thead {
+    //                             tr {
+    //                                 background-color: #6b1aa6;
+    //                                 color: #fff;
+    //                                 font-weight: 400;
+    //                                 font-size: 14px;
+    //                                 td {
+    //                                     height: 34px;
+    //                                     border-right: 2px dotted #555;
+    //                                     font-weight: bold;
+    //                                     padding: 6px;
+    //                                     font-size: 11px;
+    //                                 }
+    //                             }
+    //                         }
+    //                         .tableBody {
+    //                             border-bottom: 1px dotted #999;
+    //                             td {
+    //                                 padding: 12px;
+    //                                 font-size: 13px;
+    //                                 color: #666;
+    //                                 border-right: 1px dotted #999;
+    //                             }
+    //                         }
+    //                     }
+    //                     &Coupon {
+    //                         margin-top: 5%;
+    //                         .couponTitle {
+    //                             color: #6b1aa6;
+    //                             font-size: 16px;
+    //                             font-weight: 600;
+    //                             line-height: 24px;
+    //                             margin: unset;
+    //                         }
+    //                         span {
+    //                             font-size: 12px;
+    //                             color: #999;
+    //                         }
+    //                         .CouponInput {
+    //                             margin-top: 1%;
+    //                             display: flex;
+    //                             width: 80%;
+    //                             &Title {
+    //                                 color: #6b1aa6;
+    //                                 font-size: 15px;
+    //                                 font-weight: 600;
+    //                                 line-height: 24px;
+    //                                 margin-right: 3px;
+    //                             }
+    //                             input {
+    //                                 padding: 2px 0;
+    //                                 border: 1px solid #ddd;
+    //                                 &:focus {
+    //                                     outline: none;
+    //                                 }
+    //                             }
+    //                             button {
+    //                                 border: none;
+    //                                 padding: 0 12px;
+    //                                 border-top-right-radius: 5px;
+    //                                 border-bottom-right-radius: 5px;
+
+    //                                 background: #888;
+    //                                 color: #fff;
+    //                                 font-size: 13px;
+    //                                 text-transform: uppercase;
+    //                                 &:focus {
+    //                                     outline: none;
+    //                                 }
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+    //                 .InvoiceRight {
+    //                     width: 50%;
+    //                     height: 100%;
+    //                     .rightWrapper {
+    //                         float: right;
+    //                         width: fit-content;
+    //                         height: fit-content;
+    //                         .InvoiceRightTitle {
+    //                             color: #6b1aa6;
+    //                             text-align: left;
+    //                             font-weight: bold;
+    //                         }
+    //                         .InvoiceRightTable {
+    //                             tr {
+    //                                 td {
+    //                                     font-size: 13px;
+    //                                     padding: 4px;
+    //                                     border-right: 1px dotted #ddd;
+    //                                     border-bottom: 1px dotted #ddd;
+    //                                 }
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+}
+
+.InputContainer {
+    @include col;
+    width: 48%;
+    font-family: "Poppins", sans-serif;
+
+    &Label {
+        color: rgba(70, 4, 4, 0.6);
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 4px;
+        text-transform: capitalize;
+
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+        }
+    }
+    &Input {
+        width: 100%;
+        background-color: #fff;
+        padding: 5px 10px;
+        background: #fffcf8;
+        border: 1px solid rgba(70, 4, 4, 0.21);
+        border-radius: 5px;
+        @media screen and (max-width: 768px) {
+            font-size: 13px;
+        }
+    }
+}
+.AddressContainer {
+    margin-top: 2%;
+    @include center;
+    width: 100%;
+    .AddressForm {
+        width: 100%;
+        .formComponents {
+            margin-top: 2%;
+            width: 100%;
+            @include row;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+        .useLocation {
+            width: 34%;
+            padding: 5px 0;
+            margin-bottom: 3px;
+            background: linear-gradient(172.49deg, #da892e -19.92%, #eb9f4b 71.27%);
+            border: 1px solid rgba(70, 4, 4, 0.21);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            @include center;
+
+            @media screen and (max-width: 768px) {
+                width: 45%;
+            }
+            &Wrapper {
+                width: 80%;
+                @include center;
+                .LocaIcon {
+                    color: #fff;
+                }
+                span {
+                    color: #fff;
+                    margin-left: 2%;
+                    font-size: 14px;
+                    font-weight: 600;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+
+        &Btn {
+            margin-top: 2%;
+            background-color: rgba(70, 4, 4, 1);
+            border: unset;
+            padding: 5px 0;
+            color: rgba(251, 173, 85, 1);
+            width: 30%;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 6px;
+
+            @media screen and (max-width: 768px) {
+                width: 50%;
+                margin-top: 5%;
+            }
+        }
+    }
+}
+.AddressViewParent {
+    width: 100%;
+    height: auto;
+
+    .selectedAddr {
+        border: 1px solid rgba(70, 4, 4, 0.57) !important;
+    }
+
+    .AddressBox {
+        width: 80%;
+        background-color: #fff;
+        border-radius: 5px;
+        border: 1px solid rgba(70, 4, 4, 0.284);
+        cursor: pointer;
+        @include center;
+        padding: 25px 15px;
+
+        @media screen and (max-width: 768px) {
+            width: 95%;
+        }
+
+        &Wrapper {
+            width: 90%;
+            .AddressTop {
+                width: 100%;
+                @include center;
+                justify-content: space-between;
+
+                .OwnerName {
+                    color: rgba(187, 104, 10, 1);
+                    font-size: 16.5px;
+                    font-weight: 600;
+                }
+                .selectBX {
+                    width: 15.5px;
+                    height: 15px;
+                    background-color: #000;
+                    border-radius: 50%;
+                }
+            }
+            .NumDiv {
+                margin-top: 1.5%;
+                width: 100%;
+                .NumMain,
+                .NumAlt {
+                    font-size: 12.5px;
+                    font-weight: 600;
+                    color: rgba(70, 4, 4, 0.3);
+                }
+                .NumMain {
+                    color: rgba(70, 4, 4, 0.79);
+                }
+            }
+            .mainAddr {
+                width: 100%;
+                margin-top: 1.5%;
+                margin-bottom: 1.5%;
+                p {
+                    color: rgba(70, 4, 4, 0.5);
+                    font-size: 13px;
+                    font-weight: 600;
+                }
+            }
+            .ZipText {
+                margin-top: 1.5%;
+                color: rgba(70, 4, 4, 0.79);
+                font-size: 12.5px !important;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .addNewText {
+        color: rgba(211, 139, 58, 0.98);
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 2%;
+        text-transform: capitalize;
+    }
+}
+@media screen and (max-width: 768px) {
+    .checkoutSection {
+        .checkoutImg {
+            margin-top: 4%;
+            margin-bottom: 2%;
+        }
+        .chakraAccordion {
+            width: 95%;
+            .accordionItem {
+                .firstComp {
+                    div {
+                        margin-bottom: 6px;
+                        flex-direction: column;
+                        label {
+                            margin-bottom: 6px;
+                        }
+                        input {
+                            width: 100% !important;
+                            margin: unset;
+                        }
+                    }
+
+                    span {
+                        text-align: center !important;
+                    }
+                    button {
+                        align-self: center !important;
+                    }
+                }
+                .panel {
+                    .panelContainer {
+                        .infoContainer {
+                            display: unset;
+                        }
+                        .giftBox {
+                            textarea {
+                                width: 100%;
+                            }
+                        }
+                        .nextBtn {
+                            margin-top: 6px;
+                            width: fit-content;
+                            margin-left: unset !important;
+                        }
+                    }
+
+                    .InvoiceSection {
+                        flex-direction: column;
+                        .InvoiceLeft {
+                            width: 100%;
+                        }
+                        .InvoiceRight {
+                            margin-top: 20px;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                    .nextBtn {
+                        width: unset;
+                        margin-left: unset;
+                    }
+                }
+                .forthComp {
+                    flex-direction: column;
+                    span {
+                        width: 100% !important;
+                    }
+                    div {
+                        margin: unset;
+                        width: 100% !important;
+                    }
+                    .invoiceComp {
+                        width: 100%;
+                        margin-left: 0 !important;
+                        margin-top: 11px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#accordion-button-5 {
+    background-color: transparent !important;
+
+    &:focus {
+        outline: none !important;
+    }
+}

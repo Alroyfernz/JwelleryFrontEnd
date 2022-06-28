@@ -1,0 +1,148 @@
+@import "mixin";
+
+.Details {
+  @include col;
+  header {
+    @include row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    h2 {
+      color: #800000;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 33px;
+      @media (max-width: 550px) {
+        font-size: 14px;
+      }
+    }
+    button {
+      @include row;
+      @include center;
+      background: #faefef;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      width: 125px;
+      gap: 4%;
+      color: #d38b3a;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      padding: 7px;
+      @media (max-width: 550px) {
+        padding: 4px 7px;
+        font-size: 10px;
+        width: 60px;
+        img {
+          height: 10px !important;
+          width: 10px !important;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  figure {
+    margin-top: 1%;
+    @include row;
+    width: 100%;
+    .avatar {
+      border-radius: 50%;
+    }
+  }
+  &Name {
+    @include row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: 800px) {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+    }
+    span {
+      @media (max-width: 550px) {
+        @include col;
+        align-items: baseline;
+      }
+    }
+  }
+  label {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 28px;
+    min-width: 70px !important;
+    @media (max-width: 900px) {
+      font-size: 12px;
+    }
+    @media (max-width: 600px) {
+      font-size: 10px;
+    }
+  }
+  &Save {
+    background: #460404;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 150px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fbad55;
+    padding: 6px;
+    margin-top: 1.5%;
+  }
+  input {
+    background: #fffcf8;
+    border: 1px solid rgba(70, 4, 4, 0.21);
+    border-radius: 8px;
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #fbad55 !important;
+    min-width: 200px;
+    &:focus {
+      outline: #fbad55;
+    }
+    &::placeholder {
+      color: #fbad55;
+    }
+  }
+  .Select {
+    min-width: 200px;
+    height: 32px;
+    @include row;
+    @include center;
+    color: #fbad55;
+    font-size: 14px;
+    width: 200px;
+    background: #fffcf8;
+    border: 1px solid rgba(70, 4, 4, 0.21);
+    border-radius: 8px;
+    padding: 2px 4px;
+    &:focus {
+      outline: #fbad55;
+    }
+  }
+  div {
+    align-items: center;
+    margin-top: 1.5%;
+    @include row;
+    @media (max-width: 700px) {
+      margin-top: 2%;
+    }
+    @media (max-width: 500px) {
+      @include col;
+      align-items: baseline;
+    }
+  }
+  span {
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+    @media (max-width: 900px) {
+      font-size: 12px;
+    }
+    @media (max-width: 600px) {
+      font-size: 10px;
+    }
+  }
+}

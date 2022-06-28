@@ -1,0 +1,439 @@
+@import "mixin";
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+.Navbar {
+  @include col;
+  @include center;
+  z-index: 999;
+  width: 100%;
+  transition: all 0.3s ease-in;
+  background-color: #fff;
+  &Cont {
+    width: 100%;
+    height: 100%;
+
+    @media screen and (max-width: 768px) {
+      border-bottom: solid 2px #800000;
+    }
+    @include row;
+    @include center;
+    &Sidebar {
+      width: 10%;
+      @include row;
+      align-items: center;
+      justify-content: flex-start;
+      @media (min-width: 767px) {
+        display: none;
+      }
+      &LogoStyle {
+        color: rgb(178, 161, 161);
+        font-size: 25px;
+      }
+    }
+    .TopSection {
+      width: 100%;
+      @include center;
+      padding: 10px 0;
+      border-bottom: solid 1.6px #800000;
+
+      .TopWrapper {
+        display: flex;
+        width: 90%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 0;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        border-bottom: unset;
+      }
+    }
+    &Logo {
+      cursor: pointer;
+      @include row;
+      align-items: center;
+      padding: 8px 0;
+      justify-content: flex-start;
+      // width: 30%;
+      z-index: 0;
+      .NavbarHeading {
+        font-family: "Pinyon Script", cursive;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: capitalize;
+        font-size: 35px;
+
+        line-height: 22px;
+        margin-left: 10px;
+        color: #460404;
+      }
+    }
+    &Rest {
+      @include col;
+      @include center;
+      width: 100%;
+      height: 100%;
+      @media (max-width: 766px) {
+        width: 80%;
+      }
+      &Top {
+        @include row;
+        height: fit-content;
+        padding-top: 15px;
+        justify-content: flex-end;
+        width: 98%;
+        &Items {
+          font-size: 13.5px;
+          padding: 0 1% 0.6% 1%;
+          color: rgba(51, 51, 51, 0.692);
+
+          &:hover {
+            cursor: pointer;
+          }
+          @include center;
+          &:nth-child(2) {
+            &::before {
+              margin-right: 8px;
+              content: "|";
+            }
+            &::after {
+              margin-left: 8px;
+              content: "|";
+            }
+          }
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+      &Mid {
+        @include row;
+        // height: 30%;
+        // justify-content: space-around;
+        align-items: center;
+        width: 65%;
+        gap: 10%;
+        min-width: 50%;
+        @media screen and (max-width: 768px) {
+          width: fit-content;
+          min-width: unset;
+        }
+        .LeftMid {
+          position: relative;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          gap: 2.5%;
+
+          .SearchResModal {
+            position: absolute;
+            width: 360px;
+            height: 400px;
+            background: linear-gradient(180deg, #fff 0.52%, #f3e7e7 100%);
+            top: 34px;
+            transition: opacity 0.125s ease-in-out;
+            left: 0;
+            z-index: 10;
+
+            .SearchResBox {
+              width: 100%;
+              display: flex;
+              cursor: pointer;
+              padding: 0 10px;
+              margin-top: 3%;
+              align-items: center;
+              justify-content: space-between;
+              img {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+              }
+              .SearchTitle {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                font-family: "Poppins", sans-serif;
+
+                .productName {
+                  font-size: 12px;
+                }
+                .productType {
+                  font-size: 11px;
+                  text-transform: capitalize;
+                  font-weight: 600;
+                }
+              }
+
+              &:hover {
+              }
+            }
+            @media (max-width: 768px) {
+              display: none;
+            }
+          }
+          .InputWrapper {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            @media screen and (max-width: 768px) {
+              display: none;
+            }
+            border-radius: 6px;
+            .SearchBar {
+              background: transparent;
+              background: #f2e6e6;
+
+              border-top-left-radius: 6px;
+              border-bottom-left-radius: 6px;
+
+              width: 90%;
+              padding: 4px 5px 4px 15px;
+              &:focus {
+                outline: none;
+              }
+              &::after {
+                content: "bar";
+                height: 10;
+                width: 10;
+                color: "#eee";
+              }
+            }
+            .iconWrapper {
+              width: 10%;
+              padding: 4px;
+              @include center;
+              border-top-right-radius: 6px;
+              border-bottom-right-radius: 6px;
+
+              background-color: rgba(70, 4, 4, 1);
+            }
+            &:focus {
+              outline-color: rgba(70, 4, 4, 1);
+              // outline: none;
+            }
+          }
+          .ListItems {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 3%;
+
+            @media screen and (max-width: 768px) {
+              display: none;
+            }
+            .IndiItem {
+              font-family: "Poppins", sans-serif !important;
+              cursor: pointer;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14.5px;
+              line-height: 22px;
+              /* identical to box height */
+              text-transform: uppercase;
+              display: flex;
+              align-items: center;
+
+              color: #000000;
+
+              opacity: 0.6;
+            }
+          }
+        }
+
+        &Icon {
+          margin: 0px 4px;
+          cursor: pointer;
+        }
+        &SearchBar {
+          border: 1px solid rgb(185, 185, 185);
+          display: flex;
+          width: 18%;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 5px;
+          padding: 4px 8px 8px 4px;
+          position: relative;
+
+          @media screen and (max-width: 768px) {
+            display: none;
+          }
+          &Input {
+            width: 100%;
+            &:focus {
+              outline: none;
+            }
+            @media (max-width: 768px) {
+              display: none;
+            }
+          }
+          &Modal {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            top: 105%;
+            background-color: #fff;
+            // padding: 15px;
+            left: 0%;
+            z-index: 10;
+            border-radius: 5px;
+            box-shadow: 0px -2px 51px -4px rgba(0, 0, 0, 0.2);
+            // -webkit-box-shadow: 0px -2px 51px -4px rgba(0, 0, 0, 0.32);
+            // -moz-box-shadow: 0px -2px 51px -4px rgba(0, 0, 0, 0.32);
+            &Link {
+              display: flex;
+              flex-wrap: wrap;
+
+              flex-direction: row;
+              align-items: center;
+              padding: 20px;
+              margin-top: 12px;
+              justify-content: center;
+              &:hover {
+                background-color: gray;
+                cursor: pointer;
+              }
+              &Text {
+                padding: 12px;
+                // background-color: yellow;
+                font-size: 14px;
+                text-transform: capitalize;
+                transition: all 0.2s ease-out;
+                &:hover {
+                  cursor: pointer;
+                  background-color: rgba(162, 162, 162, 0.122);
+                }
+              }
+            }
+          }
+        }
+        &IconLocation {
+          margin-left: 18px;
+          background-image: url("https://storage.sg.content-cdn.io/in-resources/d7048855-742a-406c-a67d-5c2962e69e5e/Stylesheet/images/png-storeloc-icon.jpg");
+          width: 34px;
+          height: 35px;
+        }
+        &IconCart {
+          margin-left: 18px;
+          background: url("https://storage.sg.content-cdn.io/in-resources/d7048855-742a-406c-a67d-5c2962e69e5e/Stylesheet/images/sprite.png")
+            no-repeat -65px 0;
+          width: 38px;
+          height: 55px;
+        }
+        .cartNav {
+          display: none;
+        }
+      }
+      &Bottom {
+        @include row;
+        width: 98%;
+        // height: 40%;
+        padding: 20px;
+        @media (max-width: 768px) {
+          display: none;
+        }
+        &Items {
+          @include center;
+          text-align: center;
+          cursor: pointer;
+          padding: 0% 1% 0% 1%;
+          position: relative;
+          font-size: 14px;
+          font-weight: 500;
+          color: rgb(83, 83, 83);
+          &:hover {
+            &::after {
+              content: "";
+              border-bottom: solid 3px rgba(70, 4, 4, 1);
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 4px;
+              left: 0;
+              transition: 1000 ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+  .Search {
+    @include row;
+    width: 98%;
+    height: 40px;
+    display: none;
+    font-family: "Poppins", sans-serif;
+
+    @media (max-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+
+    &MobIcon {
+      font-size: 20px;
+      color: #777;
+    }
+    &Input {
+      padding: 4px 8px;
+      width: 100%;
+      font-size: 13px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .SearchResModalMob {
+    position: absolute;
+    width: 100vw;
+    min-height: 40vh;
+    max-height: 50vh;
+    background: linear-gradient(180deg, #fff 0.52%, #f3e7e7 100%);
+    top: 180px;
+    transition: opacity 0.125s ease-in-out;
+    left: 0;
+    z-index: 10;
+    display: none;
+    .SearchResBox {
+      width: 100%;
+      display: flex;
+      cursor: pointer;
+      padding: 0 10px;
+      margin-top: 3%;
+      align-items: center;
+      justify-content: space-between;
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+      }
+      .SearchTitle {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-family: "Poppins", sans-serif;
+
+        .productName {
+          font-size: 12px;
+        }
+        .productType {
+          font-size: 11px;
+          text-transform: capitalize;
+          font-weight: 600;
+        }
+      }
+
+      &:hover {
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+}

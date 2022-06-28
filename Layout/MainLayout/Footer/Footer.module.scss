@@ -1,0 +1,102 @@
+@import "mixin";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+.icon {
+  // padding:5px;
+  color: #fff;
+  margin: 3px;
+  font-size: 23px;
+  &:first-child {
+    margin-left: 0px;
+  }
+}
+
+.Footer {
+  @include col;
+  @include center;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(100.32deg, #5e381a 0.51%, #321704 95.5%);
+  &Top {
+    padding: 2rem 4rem;
+
+    @include row;
+    // @include center;
+    width: 100%;
+    flex-wrap: wrap;
+    background: rgba(211, 139, 58, 1);
+    // background: #f8f8f8;
+
+    @media screen and (max-width: 768px) {
+      padding: 10px 15px;
+    }
+    &Box {
+      width: 18%;
+      @include col;
+      margin: 1%;
+      @media (max-width: 790px) {
+        width: 40%;
+        margin: 5%;
+      }
+      &H {
+        font-size: 20px;
+        margin-bottom: 5px;
+        color: #fff;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        font-weight: 500;
+      }
+      &P {
+        font-size: 14px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        cursor: pointer;
+        margin-top: 4px;
+        color: #fff;
+
+        @media screen and (max-width: 768px) {
+          font-size: 11px;
+        }
+      }
+      &Row {
+        @include row;
+        // @include center;
+      }
+    }
+  }
+  &Mid {
+    @include row;
+    @include center;
+    background: #fff;
+    &Left {
+      @include row;
+      flex-wrap: wrap;
+      width: 60%;
+      padding: 2%;
+      &Name {
+        font-size: 12px;
+        text-wrap: no-wrap;
+        color: gray;
+        &::after {
+          content: "/";
+          padding: 0% 4%;
+        }
+        &:last-child {
+          &::after {
+            content: "";
+            padding: 0% 4%;
+          }
+        }
+      }
+    }
+    &Right {
+      @include col;
+      width: 40%;
+    }
+  }
+  &Bottom {
+    @include row;
+    @include center;
+    font-size: 15px;
+    margin: 2%;
+    color: #fff;
+    text-align: center;
+  }
+}

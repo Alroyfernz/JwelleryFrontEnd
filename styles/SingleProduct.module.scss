@@ -1,0 +1,10 @@
+@import "mixin";
+
+.SingleProduct {
+  @include col;
+  @include center;
+  width: 100%;
+  height: auto;
+  padding: 2% 4%;
+  background: linear-gradient(180deg, #f2e6e6 0%, rgba(242, 230, 230, 0) 100%);
+}

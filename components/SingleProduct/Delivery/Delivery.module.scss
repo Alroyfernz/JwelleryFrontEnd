@@ -1,0 +1,59 @@
+@import "../../../styles/mixin";
+
+.Delivery {
+  @include col;
+  width: 100%;
+  margin-top: 3%;
+  &Bottom {
+    padding: 2% 0%;
+    margin-bottom: 5%;
+    @include row;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: 700px) {
+      @include col;
+      justify-content: flex-start;
+    }
+    &Left {
+      @include col;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 24px;
+      color: rgba(70, 4, 4, 0.44);
+      span:nth-child(3) {
+        margin: 5% 0% 5% 0%;
+      }
+    }
+    &Right {
+      @include col;
+      @media (max-width: 700px) {
+        margin-top: 5%;
+      }
+      &Head {
+        font-weight: 800;
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 1%;
+        color: rgba(70, 4, 4, 0.72);
+      }
+      div {
+        label {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 24px;
+          color: #ae9191;
+          margin-right: 8px;
+        }
+        input {
+          background: #f2e6e6;
+          font-size: 12px;
+          border-radius: 10px;
+          padding: 2px;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@import "mixin";
+
+.ReviewContainer {
+    width: 100%;
+    height: auto;
+    background: rgba(242, 230, 230, 1);
+    @include center;
+    padding-bottom: 8%;
+    .ReviewWrapper {
+        width: 100%;
+        // padding: 0 25px;
+
+        @include center;
+        @include col;
+        .ReviewTitle {
+            font-weight: 600;
+            margin-top: 4%;
+            font-size: 26px;
+            line-height: 36px;
+
+            color: rgba(0, 0, 0, 0.7);
+            @media screen and (max-width: 768px) {
+                font-size: 18px;
+            }
+        }
+        .SliderWrapper {
+            margin-top: 3%;
+            padding: 30px 0;
+            width: 100%;
+            @include center;
+            background-color: #fff;
+        }
+    }
+}
+
+.BoxContainer {
+    background: #f2e6e6;
+    border-radius: 12px;
+    padding: 25px 19px;
+    width: fit-content;
+
+    @include center;
+    .BoxWrapper {
+        width: 90%;
+
+        @include center;
+        @include col;
+        .TopSection {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            .UserImg {
+                width: 40px;
+                height: 40px;
+                background: #fff;
+                border-radius: 50%;
+            }
+            .RatingBar {
+                width: 50%;
+                margin-left: 6px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        .BottomSection {
+            width: 100%;
+            margin-top: 2%;
+            .ReviewText {
+                font-size: 14px;
+                color: rgba(70, 4, 4, 0.31);
+            }
+        }
+    }
+}

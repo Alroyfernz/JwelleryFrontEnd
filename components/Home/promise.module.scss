@@ -1,0 +1,79 @@
+@import "../styles/mixin";
+
+.promiseSection {
+    @include center;
+    @include col;
+    width: 100%;
+    border-bottom: 1px solid rgba(211, 139, 58, 1);
+    height: auto;
+    margin-top: 5%;
+    padding-bottom: 4%;
+    .promiseTitle {
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.7);
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .promiseContainer {
+        width: 100%;
+        height: auto;
+        @include center;
+        .promiseWrapper {
+            height: 100%;
+            display: grid;
+            margin: 5% 0;
+            grid-template-columns: repeat(3, 28%);
+            grid-column-gap: 50px;
+            grid-row-gap: 70px;
+            .promiseParent {
+                @include center;
+                @include col;
+                .promiseComp {
+                    width: fit-content;
+                    padding: 20px;
+                    border-radius: 50%;
+                    background: linear-gradient(
+                        152.51deg,
+                        rgba(211, 139, 58, 0.4) 8.6%,
+                        rgba(255, 222, 184, 0.1) 86.68%
+                    );
+                }
+                .promiseHeading {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 28px;
+                    align-items: center;
+                    margin-top: 5%;
+                    color: #9f6523;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .promiseSection {
+        .promiseTitle {
+            font-size: 17px;
+        }
+        .promiseContainer {
+            .promiseWrapper {
+                grid-template-columns: repeat(2, 1fr);
+                grid-row-gap: 20px;
+                .promiseParent {
+                    .promiseComp {
+                        width: 90px !important;
+                        height: 90px !important;
+                    }
+                    .promiseHeading {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

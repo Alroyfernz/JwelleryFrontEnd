@@ -1,0 +1,128 @@
+.heroContainer {
+    // height: 88vh;
+    position: relative;
+
+    max-height: 1100px;
+    overflow: hidden;
+
+    .carousel-root {
+        .carousel-slider {
+            button {
+                display: none;
+            }
+        }
+        .carousel {
+            display: none;
+        }
+    }
+    .ImageWrapper {
+        width: 100%;
+        height: 68vh;
+        position: relative;
+
+        @media (max-width: 768px) {
+            height: 34vh;
+        }
+        @media screen and (max-width: 458px) {
+            height: 23vh;
+        }
+    }
+    .heroWrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+
+        .heroSlide {
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            .heroSlider {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    z-index: 2;
+                    width: 100%;
+                    height: 100vh;
+                    bottom: 0vh;
+                    left: 0;
+                    overflow: hidden;
+                    opacity: 0.4;
+                    background: linear-gradient(
+                        0deg,
+                        rgba(0, 0, 0, 0.2) 0%,
+                        rgba(0, 0, 0, 0.2) 50%,
+                        rgba(0, 0, 0, 0.2) 100%
+                    );
+                }
+                .heroImage {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .sliderButtons {
+            position: absolute;
+            bottom: 20px;
+            right: 50px;
+            display: flex;
+            z-index: 10;
+            .prevButton {
+                width: 50px;
+                height: 50px;
+                color: "#eee";
+                cursor: pointer;
+                background-color: #ffffff;
+                padding: 1rem;
+                user-select: none;
+                transition: 0.3s;
+            }
+            .nextButton {
+                width: 50px;
+                height: 50px;
+                background-color: white;
+                margin-left: 1rem;
+                cursor: pointer;
+                color: "#eee";
+                padding: 1rem;
+                user-select: none;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .heroContainer {
+        // height: 49vh;
+        .sliderButtons {
+            display: none !important;
+        }
+    }
+}
+@media screen and (max-width: 450px) {
+    .heroContainer {
+        // height: 34vh;
+    }
+}
+@media screen and (max-width: 400px) {
+    .heroContainer {
+        height: 24vh;
+    }
+}

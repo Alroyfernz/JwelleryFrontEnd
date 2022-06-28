@@ -1,0 +1,28 @@
+@mixin row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin col {
+  display: flex;
+  flex-direction: column;
+}
+@mixin mainGrad {
+  background: linear-gradient(180deg, #f3e7e7 0%, #ffffff 100%);
+}
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin overlay {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10000;
+  right: 0;
+  @include col;
+  @include center;
+}

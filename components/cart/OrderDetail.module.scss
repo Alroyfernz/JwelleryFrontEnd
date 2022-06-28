@@ -1,0 +1,108 @@
+@import "../../styles/_mixin.scss";
+.OrderDetailsBox {
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 7px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    height: fit-content;
+    @include center;
+    .RightWrapper {
+        width: 70%;
+        padding-bottom: 10%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        @media screen and (max-width: 768px) {
+            width: 80%;
+        }
+        .RightTop {
+            @include center;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 17px;
+            padding: 30px 0 20px 0;
+            border-bottom: 1px solid rgba(211, 139, 58, 1);
+            color: rgba(70, 4, 4, 0.6);
+        }
+        .PriceDiv {
+            display: grid;
+            width: 100%;
+            margin-top: 5%;
+            padding: 10px 0;
+            .PriceComp {
+                margin-top: 10px;
+                padding-bottom: 13px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                span {
+                    color: rgba(70, 4, 4, 0.52);
+                    font-weight: 500;
+                    font-size: 15px;
+                }
+                .BoldPrice {
+                    font-weight: 600;
+                }
+            }
+        }
+        .GrandTotal {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 26px 0;
+            border-top: 1px solid rgba(211, 139, 58, 1);
+            color: rgba(70, 4, 4, 0.6);
+        }
+        .PlaceOrder {
+            background: rgba(70, 4, 4, 1);
+            width: 50%;
+            border-radius: 8px;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #fff;
+            padding: 8px 0;
+        }
+        .PromoDiv {
+            width: 100%;
+            margin-top: 12%;
+            h5 {
+                color: rgba(70, 4, 4, 0.6);
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+            .PromoWrapper {
+                display: flex;
+                margin-top: 15px;
+                align-items: center;
+                justify-content: space-between;
+                input {
+                    background-color: rgba(250, 245, 245, 1);
+                    padding: 4px 13px;
+                    width: 70%;
+                    border-radius: 5px;
+
+                    &::placeholder {
+                        color: rgba(70, 4, 4, 0.6);
+                        font-size: 12px;
+                        font-weight: 500;
+                    }
+                }
+                button {
+                    width: 20%;
+                    padding: 6.8px 0;
+                    color: #fff;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    font-size: 10px;
+                    border-radius: 5px;
+                    background-color: rgba(211, 139, 58, 1);
+                }
+            }
+        }
+    }
+}

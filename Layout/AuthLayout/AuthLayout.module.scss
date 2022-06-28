@@ -1,0 +1,84 @@
+@import "mixin";
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap");
+.AuthLayout {
+  background: linear-gradient(180deg, #fff 0.52%, #f3e7e7 100%);
+  @include row;
+  @include center;
+  width: 100%;
+  padding: 5% 1%;
+  height: 100%;
+
+  @media (max-width: 1024px) {
+    @include col;
+    min-height: 70vh;
+  }
+  .AuthWrapper {
+    width: 70%;
+    @include row;
+
+    @media (max-width: 768px) {
+      width: 85%;
+    }
+  }
+  .LeftWrapper {
+    width: 50%;
+    @include center;
+    border-right: 1px solid rgba(70, 4, 4, 1);
+    .AuthLayoutLeft {
+      @include center;
+      @include col;
+
+      padding: 5% 0;
+      width: 100%;
+      // min-height: 100%;
+      // height: 100%;
+
+      justify-content: flex-start;
+
+      @media (max-width: 1024px) {
+        @include col;
+
+        width: 100%;
+      }
+      @media (max-width: 767px) {
+        display: none;
+      }
+
+      &Img {
+        height: 90%;
+        width: 80%;
+      }
+      h1 {
+        font-family: "Pinyon Script", cursive;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 44px;
+        line-height: 36px;
+        text-align: center;
+        color: #460404;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  &Right {
+    padding: 1%;
+    height: 100%;
+    width: 50%;
+    @include col;
+    @include center;
+    justify-content: flex-start;
+    @media (max-width: 1024px) {
+      @include col;
+      width: 100%;
+      padding-right: 0;
+    }
+    @media (max-width: 766px) {
+      @include col;
+      padding-left: 0%;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.react-slider__imgZoom {
+  /* max-width: 80%; */
+  /* max-height: 100%; */
+  border-radius: 10px;
+}
+
+.react-slider__description {
+  display: none;
+}
+
+.react-slider__container button {
+  top: 68% !important;
+  background: #ebebeb !important;
+}
+
+.react-slider {
+  background: white !important;
+  overflow: none;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.react-slider img {
+  border: none !important;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.react-slider__ul {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  flex-flow: inherit !important;
+  scrollbar-width: none;
+  margin: 20px 0 20px 0 !important;
+}
+
+.react-slider__ul::-webkit-scrollbar {
+  display: none;
+}
+
+.react-slider__ul li {
+  margin-right: 5px;
+}
+
+@media (max-width: 767px) {
+  .react-slider__imgZoom,
+  .react-slider__lens {
+    display: none;
+  }
+}

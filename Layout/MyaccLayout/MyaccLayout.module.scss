@@ -1,0 +1,58 @@
+@import "mixin";
+
+.Myacc {
+  @include col;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, #f3e7e7 0%, #ffffff 100%);
+  &Header {
+    @include row;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    border-radius: 10px;
+    background: #fff;
+    @media (max-width: 1000px) {
+      width: 90%;
+    }
+    @media (max-width: 860px) {
+      width: 100%;
+    }
+    @media (max-width: 500px) {
+      padding: 5px;
+    }
+    &Nav {
+      width: 25%;
+      @include row;
+      @include center;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      border-radius: 10px;
+      line-height: 23px;
+      color: rgba(0, 0, 0, 0.7);
+      padding: 12px;
+      span {
+        margin-left: 5px;
+      }
+      @media (max-width: 600px) {
+        padding: 5px;
+        font-size: 11px;
+      }
+      @media (max-width: 500px) {
+        padding: 5px;
+        font-size: 10px;
+      }
+    }
+  }
+  &Bottom {
+    @include col;
+    padding: 4%;
+    margin-top: 1%;
+    width: 95%;
+    background: #ffffff;
+    border: 1px solid #ffd3a2;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../../styles/mixin";
+
+.Specification {
+  @include col;
+  width: 100%;
+  margin-top: 3%;
+  &Bottom {
+    @include row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2% 0%;
+    @media (max-width: 550px) {
+      justify-content: center;
+    }
+    &Card {
+      display: flex;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: rgba(70, 4, 4, 0.44);
+      width: 25%;
+      justify-content: space-between;
+      margin: 1.5% 0%;
+      @media (max-width: 750px) {
+        width: 45%;
+      }
+      @media (max-width: 550px) {
+        width: 90%;
+      }
+    }
+  }
+}
